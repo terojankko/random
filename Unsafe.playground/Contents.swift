@@ -50,7 +50,7 @@ do {
     let pointer = UnsafeMutableRawPointer.allocate(byteCount: byteCount, alignment: alignment)
     // 4
     defer {
-        pointer.deallocate(bytes: byteCount, alignedTo: alignment)
+        pointer.deallocate()
     }
     
 
@@ -70,10 +70,10 @@ do {
     print("Typed pointers")
     
     let pointer = UnsafeMutablePointer<Int>.allocate(capacity: count)
-    pointer.initialize(to: 0, count: count)
+    pointer.initialize(repeating: 0, count: count)
     defer {
         pointer.deinitialize(count: count)
-        pointer.deallocate(capacity: count)
+        pointer.deallocate()
     }
     
     pointer.pointee = 42
@@ -90,13 +90,13 @@ do {
 do {
     print("Converting raw pointers to typed pointers")
     
-    let rawPointer = UnsafeMutableRawPointer.allocate(bytes: byteCount, alignedTo: alignment)
+    let rawPointer = UnsafeMutableRawPointer.allocate(byteCount: byteCount, alignment: alignment)
     defer {
-        rawPointer.deallocate(bytes: byteCount, alignedTo: alignment)
+        rawPointer.deallocate()
     }
     
     let typedPointer = rawPointer.bindMemory(to: Int.self, capacity: count)
-    typedPointer.initialize(to: 0, count: count)
+    typedPointer.initialize(repeating: 0, count: count)
     defer {
         typedPointer.deinitialize(count: count)
     }
