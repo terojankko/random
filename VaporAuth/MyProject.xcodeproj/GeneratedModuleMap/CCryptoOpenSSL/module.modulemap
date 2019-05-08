@@ -1,0 +1,4 @@
+module CCryptoOpenSSL {
+    umbrella "/Users/tero.jankko/Documents/VaporAuth/.build/checkouts/crypto/Sources/CCryptoOpenSSL/include"
+    export *
+}

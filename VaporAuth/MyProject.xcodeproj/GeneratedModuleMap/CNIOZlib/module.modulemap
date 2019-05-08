@@ -1,0 +1,4 @@
+module CNIOZlib {
+    umbrella header "/Users/tero.jankko/Documents/VaporAuth/.build/checkouts/swift-nio/Sources/CNIOZlib/include/CNIOZlib.h"
+    export *
+}

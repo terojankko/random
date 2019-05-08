@@ -1,0 +1,81 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Vapor",
+		"_postman_id": "7f4f346c-9db3-d6b9-f4db-547a561e586e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"url": "",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Register user",
+			"request": {
+				"url": "http://localhost:8080/api/users/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\": \"tero2@mail.com\", \"password\" : \"password2\" }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get todos",
+			"request": {
+				"url": "http://localhost:8080/todos",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"title\": \"testing ...\" }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post todo",
+			"request": {
+				"url": "http://localhost:8080/todos",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dGVybzJAbWFpbC5jb206cGFzc3dvcmQy",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"title\": \"testing ...\" }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
